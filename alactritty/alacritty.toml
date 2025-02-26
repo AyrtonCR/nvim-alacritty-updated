@@ -1,0 +1,87 @@
+
+Skip to content
+All gists
+Back to GitHub
+Sign in
+Sign up
+
+Instantly share code, notes, and snippets.
+@ritog
+ritog/alacritty.toml
+Created October 6, 2023 10:58
+
+Code
+Revisions 1
+Stars 23
+Forks 2
+Clone this repository at &lt;script src=&quot;https://gist.github.com/ritog/76081f97681e7079d11ec163a5bd4141.js&quot;&gt;&lt;/script&gt;
+Example configuration file for Alacritty and simple guide
+alacritty.toml
+# $HOME/.config/alacritty/alacritty.toml
+# by Rito Ghosh 2023-10-06
+
+# Alacritty now uses TOML formatting for its config files.
+# This is a simple example.
+
+# There are the specification here: https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd
+# It is not obvious how it translates to TOML. But it is extremely straightforward.
+
+# example: WINDOW, COLORS, etc. are tables, and should be represented as [window], [colors], respectively.
+# specifics of variables go under them. e.g.- look under "dynamic_padding" under-
+# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#window
+# write `dynamic_padding = true` (without backticks -`) under the table [window]
+# for variables with multiple values, use "dotted keys". Like setting `padding.x = 5` under [window].
+# This is simple. If not clear, do several trials and errors.
+
+# Below is my initial set-up. The TOML homepage (https://toml.io/en/v1.0.0) was very helpful in figuring this out. 
+# I put the file alacritty.toml in $HOME/.config/alacritty. However it can be kept anywhere among the places mentioned in
+# https://github.com/alacritty/alacritty/tree/master#configuration
+
+[window]
+
+opacity = 0.2
+
+padding.x = 22
+padding.y = 3
+
+decorations = "Full"
+decorations_theme_variant = "Light" # "Dark"
+
+[font]
+
+normal.family = "Cascadia Code PL"
+bold.family = "Cascadia Code PL"
+italic.family = "Cascadia Code PL"
+bold_italic.family = "Cascadia Code PL"
+
+size = 25.0
+
+# Tip: for inspiration, look for values in the source code files of your favorite VS Code themes, and use the color picker in
+# Google to test colors before setting a value, or simply using an editor such as VS Code where colors are displayed in a 
+# small box when a HEX is detected by the editor.
+@ritog
+Author
+ritog commented Oct 6, 2023 •
+Now an easy to read blog post - An Example and Concise Guide to Alacritty Configuration through TOML.
+
+(No ads or monetized content)
+@PranavBhattarai
+PranavBhattarai commented Jan 12, 2024
+
+Thank you.
+I updated Alacritty from version 0.12 to 0.13.
+I started to see warnings, even after migrating from yml to toml.
+Fixed it by using yours. Thanks.
+to join this conversation on GitHub. Already have an account? Sign in to comment
+Footer
+© 2025 GitHub, Inc.
+Footer navigation
+
+    Terms
+    Privacy
+    Security
+    Status
+    Docs
+    Contact
+
+
